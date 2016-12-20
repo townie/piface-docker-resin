@@ -1,4 +1,4 @@
-FROM resin/resin/raspberrypi-python:3.5
+FROM resin/raspberrypi-python:3.5
 
 #switch on systemd init system in container
 ENV INITSYSTEM on
