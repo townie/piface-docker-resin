@@ -3,9 +3,9 @@ FROM resin/raspberrypi-python:3.5
 #switch on systemd init system in container
 ENV INITSYSTEM on
 
-
 # PiFace
-RUN apt-get install python3-pifacedigitalio
+RUN apt-get update \
+    && apt-get install python3-pifacedigitalio
 
 
 # pip install python deps from requirements.txt
