@@ -1,11 +1,11 @@
-FROM resin/raspberrypi-python:3.5
+FROM resin/raspberrypi-python:2.7
 
 #switch on systemd init system in container
 ENV INITSYSTEM on
 
 
 # PiFace
-RUN apt-get install python3-pifacedigitalio
+RUN apt-get install python-pifacedigitalio
 
 
 # pip install python deps from requirements.txt
@@ -16,4 +16,4 @@ RUN pip install -r /requirements.txt
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-CMD ["python3", "/usr/share/doc/python3-pifacedigitalio/examples/blink.py"]
+CMD ["python3", "/usr/share/doc/python-pifacedigitalio/examples/blink.py"]
